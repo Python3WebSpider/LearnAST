@@ -1,16 +1,16 @@
-import { parse } from '@babel/parser';
-import traverse from "@babel/traverse";
+import {parse} from '@babel/parser'
+import traverse from "@babel/traverse"
 
 const code = `function square(n) {
   return n * n;
 }`;
 
-const ast = parser.parse(code);
+const ast = parse(code)
 
 traverse(ast, {
   enter(path) {
-    if (path.isIdentifier({ name: "n" })) {
-      path.node.name = "x";
+    if (path.isIdentifier({name: "n"})) {
+      path.node.name = "x"
     }
   }
-});
+})
