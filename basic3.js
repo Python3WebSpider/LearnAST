@@ -18,6 +18,8 @@ traverse(ast, {
   }
 })
 
-const output = generate(ast).code
+const output = generate(ast, {
+  retainLines: true,
+}).code
 console.log(output)
 
