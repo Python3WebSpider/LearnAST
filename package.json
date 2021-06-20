@@ -13,5 +13,7 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "javascript-obfuscator": "^2.15.4"
+  }
 }
