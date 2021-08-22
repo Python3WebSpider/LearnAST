@@ -12,6 +12,7 @@ traverse(ast, {
     path
   ) => {
     const { confident, value } = path.evaluate();
+    console.log({ confident, value });
     if (value == Infinity || value == -Infinity) return;
     confident && path.replaceWith(types.valueToNode(value));
   },
